@@ -25,7 +25,9 @@ jobs:
           mkdir out
           dir /s /b *.java > sources.txt
           javac -d out @sources.txt
+        shell: cmd
 
       - name: Run Java tests
         run: |
           java -cp out org.junit.runner.JUnitCore TestMain
+        shell: cmd
